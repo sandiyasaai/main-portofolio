@@ -1,44 +1,46 @@
-# vCard - Personal portfolio
+# Portfolio Website
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+Portfolio statis untuk Pande I Gede Sandiyasa, dibangun dengan HTML, CSS, dan JavaScript modular tanpa build step.
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+## Struktur
 
-## Demo
+- `index.html`: shell markup untuk semua section.
+- `assets/data/content.js`: sumber data tunggal untuk profil, resume, proyek, dan kontak.
+- `assets/js/script.js`: entrypoint aplikasi.
+- `assets/js/modules/`: modul render, navigasi, sidebar, portfolio, dan form kontak.
+- `assets/css/style.css`: manifest stylesheet.
+- `assets/css/{tokens,base,layout,sections,responsive}.css`: layer styling per concern.
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+## Cara mengubah konten
 
-## Prerequisites
+Semua konten utama sekarang dipusatkan di `assets/data/content.js`.
 
-Before you begin, ensure you have met the following requirements:
+Yang bisa diubah langsung dari sana:
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+- identitas sidebar
+- deskripsi singkat profil
+- daftar layanan
+- pengalaman dan skill
+- daftar proyek portfolio
+- email tujuan form kontak
 
-## Installing vCard
+## Menjalankan secara lokal
 
-To install **vCard**, follow these steps:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
+Karena JavaScript sekarang memakai ES modules, jalankan lewat HTTP server sederhana dari root repo:
 
 ```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+python -m http.server 8000
 ```
 
-## Contact
+Lalu buka `http://127.0.0.1:8000`.
 
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
+## Hasil refactor
 
-## License
+Perubahan utama yang sudah diselesaikan:
 
-MIT
+- memindahkan seluruh konten ke satu file data
+- memecah JavaScript menjadi modul per concern
+- memecah CSS menjadi layer terpisah
+- menghapus section template yang tidak dipakai lagi
+- membersihkan aset gambar sisa template
+- merapikan perilaku navigasi, filter proyek, modal, dan form kontak

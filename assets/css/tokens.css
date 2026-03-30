@@ -1,0 +1,40 @@
+:root {
+  --bg-primary: hsl(0, 0%, 100%);
+  --bg-secondary: hsl(210, 20%, 98%);
+  --bg-tertiary: hsl(0, 0%, 100%);
+
+  --text-primary: hsl(215, 25%, 20%);
+  --text-secondary: hsl(215, 10%, 45%);
+  --text-tertiary: hsl(215, 15%, 70%);
+
+  --accent-base: hsl(220, 85%, 55%);
+  --accent-hover: hsl(220, 90%, 65%);
+
+  --border-light: hsla(215, 15%, 85%, 0.8);
+  --border-medium: hsla(215, 15%, 75%, 0.8);
+
+  --ff-primary: "Inter", sans-serif;
+
+  --fs-1: 32px;
+  --fs-2: 24px;
+  --fs-3: 20px;
+  --fs-4: 18px;
+  --fs-5: 16px;
+  --fs-6: 15px;
+  --fs-7: 14px;
+  --fs-8: 13px;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --shadow-sm: 0 4px 12px hsla(215, 20%, 30%, 0.08);
+  --shadow-md: 0 8px 24px hsla(215, 20%, 30%, 0.12);
+  --shadow-lg: 0 16px 40px hsla(215, 20%, 30%, 0.15);
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
